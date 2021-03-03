@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+
+<script src= "https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js" integrity="sha512-rMaqGbYalDaQz0lWNF2L8DHPtf4NW+gSZomExS0LcsNyRS4Rmj21+dt97XfXCZE/E569eX72Bh//Jt1EpStgiA==" crossorigin="anonymous"></script>
+</head>
+<body>
+<script src ="ator.js"></script>
+<script src ="carro.js"></script>
+<script src ="imagens.js"></script>
+<script src= "p5.collide2d.js"></script>
+<script>
+
+//esse script serve só de referencia ja que o p5.js e o chrome impossibilitam o fetch local, ate eu achar um workaround vou fazendo no p5 e upando o codigo aqui. 
+//edit: montando um webserver consegue upar a pagina, é so ativar o webserver extension do chrome usar o link do server (http://127.0.0.1:8887) para acessar o diretorio.
+
+
+function setup(){
+	createCanvas(500,400);
+	somDaTrilha.loop();
+}
+
+function draw(){
+	background(imagemDaEstrada);
+	mostraAtor();
+	mostraCarro();
+	movimentaCarro();
+	movimentaAtor();
+	voltaPosicaoInicialDoCarro();
+	verificaColisao();
+	incluiPontos();
+	marcaPonto();
+	
+}	
+
+</script>
+</body>
